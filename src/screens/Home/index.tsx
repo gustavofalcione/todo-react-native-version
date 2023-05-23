@@ -13,6 +13,7 @@ import Icon from "@expo/vector-icons/Feather";
 
 import { styles } from "./styles";
 import { Task } from "../../components/Task";
+import { EmptyList } from "../../components/EmptyList";
 
 interface Task {
   description: string;
@@ -104,6 +105,7 @@ export function Home() {
               onDeleteTask={() => handleDeleteTask(task.id)}
             />
           )}
+          ListEmptyComponent={<EmptyList />}
         />
       </View>
     </>
